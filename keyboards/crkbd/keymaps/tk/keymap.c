@@ -46,6 +46,10 @@ const uint16_t PROGMEM UNDS_COMBO[] =    {KC_Y, KC_H, COMBO_END};
 const uint16_t PROGMEM EXLM_COMBO[] =    {KC_T, KC_G, COMBO_END};
 const uint16_t PROGMEM DQUO_COMBO[] =    {KC_G, KC_B, COMBO_END};
 const uint16_t PROGMEM QUOT_COMBO[] =    {KC_H, KC_N, COMBO_END};
+
+// CAPS_WORD
+const uint16_t PROGMEM CAPS_WORD_COMBO[] = {SFT_S, SFT_L, COMBO_END};
+
 // copy, paste, undo, cut
 const uint16_t PROGMEM UNDO_COMBO[] =    {CTL_A, KC_Z, COMBO_END};
 const uint16_t PROGMEM CUT_COMBO[] =     {SFT_S, KC_X, COMBO_END};
@@ -69,7 +73,8 @@ combo_t key_combos[] = {
 	COMBO(QUOT_COMBO, KC_QUOT),
 	COMBO(UNDS_COMBO, KC_UNDS),
 	COMBO(EXLM_COMBO, KC_EXLM),
-
+    // CAPS_WORD
+    COMBO(CAPS_WORD_COMBO, CW_TOGG),
 	// COPY, PASTE, ETC
 	COMBO(UNDO_COMBO, LCTL(KC_Z)),
 	COMBO(CUT_COMBO, LCTL(KC_X)),
@@ -82,7 +87,6 @@ combo_t key_combos[] = {
     COMBO(VOL_MUTE_COMBO, KC_MUTE),
 };
 
-
 // TODO:
 //
 // KC_BSLS - backslack
@@ -90,7 +94,6 @@ combo_t key_combos[] = {
 // Home - KC_HOME
 // END - KC_END
 //
-// Caps Word
 // Macro for "* [ ]"
 //
 // Period (KC_DOT) on numberpad?
