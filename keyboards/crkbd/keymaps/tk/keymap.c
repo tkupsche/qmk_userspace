@@ -82,12 +82,27 @@ combo_t key_combos[] = {
     COMBO(VOL_MUTE_COMBO, KC_MUTE),
 };
 
+
+// TODO:
+//
+// KC_BSLS - backslack
+//
+// Home - KC_HOME
+// END - KC_END
+//
+// Caps Word
+// Macro for "* [ ]"
+//
+// Period (KC_DOT) on numberpad?
+// Moving more punctuation to combos on first layer?
+// Enter combo for numberpad?
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      XXXXXXX,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                         KC_Y,    KC_U,    KC_I,    KC_O,  KC_P, XXXXXXX,
+      XXXXXXX,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                         KC_Y,    KC_U,    KC_I,    KC_O,    KC_P, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX,	 CTL_A,	  SFT_S,  ALT_D,    GUI_F,  KC_G,                           KC_H,   GUI_J,   ALT_K,   SFT_L,CTL_SCLN, XXXXXXX,
+      XXXXXXX,	 CTL_A,	  SFT_S,  ALT_D,    GUI_F,    KC_G,                         KC_H,   GUI_J,   ALT_K,   SFT_L,CTL_SCLN, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
@@ -98,11 +113,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [1] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      XXXXXXX, KC_ESC , KC_DQUO, KC_QUOT, KC_LPRN, KC_RPRN,                      KC_PAST,    KC_1,    KC_2,   KC_3, KC_PPLS, XXXXXXX,
+      XXXXXXX, _______, _______, _______, KC_LPRN, KC_RPRN,                      KC_PAST,    KC_1,    KC_2,   KC_3, KC_PPLS, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX, _______, _______, _______, KC_LCBR, KC_RCBR,                      KC_PSLS,    KC_4,    KC_5,    KC_6, KC_PMNS, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, _______, _______, KC_R, KC_LBRC, KC_RBRC,                     KC_EQUAL,    KC_7,    KC_8,    KC_9,    KC_0, XXXXXXX,
+      XXXXXXX, _______, _______, _______, KC_LBRC, KC_RBRC,                     KC_EQUAL,    KC_7,    KC_8,    KC_9,    KC_0, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                            _______, TO(0) , _______,    _______, _______, _______
                                       //`--------------------------'  `--------------------------'
@@ -110,11 +125,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [2] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      XXXXXXX,  KC_DEL, KC_EXLM,   KC_AT,  KC_HASH, KC_DLR,                       KC_TIK, XXXXXXX,   KC_UP, XXXXXXX, XXXXXXX, XXXXXXX,
+      XXXXXXX,  KC_DEL, _______,   KC_AT,  KC_HASH, KC_DLR,                       KC_TIK, XXXXXXX,   KC_UP, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX, _______, _______, _______, KC_AMPR, KC_PIPE,                       KC_TLD, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX,   TO(1),   TO(2),   TO(3), KC_PERC, KC_CIRC,                      KC_UNDS, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+      XXXXXXX, _______, _______, _______, KC_PERC, KC_CIRC,                      KC_UNDS, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           _______, TO(0), _______,    _______, _______, _______
                                       //`--------------------------'  `--------------------------'
