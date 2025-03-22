@@ -36,7 +36,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define KC_TLD S(KC_GRV)
 
 // COMBOS
-#define COMBO_ONLY_FROM_LAYER 0
 
 const uint16_t PROGMEM LAYER_1_COMBO[] = {KC_ENT, KC_Y, COMBO_END};
 const uint16_t PROGMEM LAYER_2_COMBO[] = {KC_ENT, KC_U, COMBO_END};
@@ -61,6 +60,8 @@ const uint16_t PROGMEM VOL_UP_COMBO[] =    {KC_P, CTL_SCLN, COMBO_END};
 const uint16_t PROGMEM VOL_DOWN_COMBO[] =  {CTL_SCLN, KC_SLSH, COMBO_END};
 const uint16_t PROGMEM VOL_MUTE_COMBO[] =  {KC_P, CTL_SCLN, KC_SLSH, COMBO_END};
 
+// Numberpad ergonomics
+const uint16_t PROGMEM NUM_PAD_DEC_COMBO[] = {KC_PMNS, KC_0, COMBO_END};
 
 combo_t key_combos[] = {
     COMBO(LAYER_1_COMBO, TO(1)),
@@ -85,6 +86,8 @@ combo_t key_combos[] = {
 	COMBO(VOL_UP_COMBO, KC_VOLU),
     COMBO(VOL_DOWN_COMBO, KC_VOLD),
     COMBO(VOL_MUTE_COMBO, KC_MUTE),
+    // Decimal for numpad ergonomics
+    COMBO(NUM_PAD_DEC_COMBO, KC_DOT),
 };
 
 // TODO:
@@ -94,11 +97,9 @@ combo_t key_combos[] = {
 // Home - KC_HOME
 // END - KC_END
 //
-// Macro for "* [ ]"
+// Macro for "* [ ]" - using combos + macros in keymap.json
 //
-// Period (KC_DOT) on numberpad?
 // Moving more punctuation to combos on first layer?
-// Enter combo for numberpad?
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT_split_3x6_3(
