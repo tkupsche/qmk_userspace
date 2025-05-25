@@ -91,12 +91,6 @@ combo_t key_combos[] = {
 };
 
 // TODO:
-//
-// KC_BSLS - backslack
-//
-// Home - KC_HOME
-// END - KC_END
-//
 // Macro for "* [ ]" - using combos + macros in keymap.json
 //
 // Moving more punctuation to combos on first layer?
@@ -117,7 +111,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [1] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      XXXXXXX, _______, _______, _______, KC_LPRN, KC_RPRN,                      KC_PAST,    KC_1,    KC_2,   KC_3, KC_PPLS, XXXXXXX,
+      XXXXXXX, _______, _______, KC_BSLS, KC_LPRN, KC_RPRN,                      KC_PAST,    KC_1,    KC_2,   KC_3, KC_PPLS, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX, _______, _______, _______, KC_LCBR, KC_RCBR,                      KC_PSLS,    KC_4,    KC_5,    KC_6, KC_PMNS, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
@@ -129,7 +123,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [2] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      XXXXXXX,  KC_DEL, _______,   KC_AT,  KC_HASH, KC_DLR,                       KC_TIK, XXXXXXX,   KC_UP, XXXXXXX, XXXXXXX, XXXXXXX,
+      XXXXXXX,  KC_DEL, _______,   KC_AT,  KC_HASH, KC_DLR,                       KC_TIK, KC_HOME,   KC_UP,  KC_END, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX, _______, _______, _______, KC_AMPR, KC_PIPE,                       KC_TLD, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
