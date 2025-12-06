@@ -27,7 +27,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
 // Right-hand home row mods
-#define GUI_J RALT_T(KC_J)
+#define GUI_J RGUI_T(KC_J)
 #define ALT_K RALT_T(KC_K)
 #define SFT_L RSFT_T(KC_L)
 #define CTL_SCLN RCTL_T(KC_SCLN)
